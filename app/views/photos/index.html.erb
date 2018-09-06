@@ -1,0 +1,22 @@
+<% content_for :title, 'Zdjęcia' %>
+
+<h1>Zdjęcia</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Tytuł</th>
+      <th>Opis</th>
+      <th>Plik</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @photos.each do |photo| %>
+      <tr>
+        <td><%= photo.title %></td>
+        <td><%= photo.description %></td>
+        <td><%= photo.image %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
