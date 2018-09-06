@@ -13,7 +13,7 @@
   <tbody>
     <% @photos.each do |photo| %>
       <tr>
-        <td><%= photo.title %></td>
+        <td><%= link_to photo.title, photo_path(photo) %></td>
         <td><%= photo.description %></td>
         <td><%= photo.image %></td>
       </tr>

@@ -2,11 +2,8 @@
 
 <h1>Picturest</h1>
 
-<h2>Aktualny czas
-  <%= Time.now %></h2>
+<h2>Zdjęcia
 
-<ul>
-  <% (1..10).each do |number| %>
-    <li><%= number %></li>
-  <% end %>
-</ul>
+<%= link_to "Dodaj zdjęcie", new_photo_path, class: 'btn btn-primary pull-right' %>
+
+</h2>
