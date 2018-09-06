@@ -1,1 +1,12 @@
+<% content_for :title, "Strona główna" %>
+
 <h1>Picturest</h1>
+
+<h2>Aktualny czas
+  <%= Time.now %></h2>
+
+<ul>
+  <% (1..10).each do |number| %>
+    <li><%= number %></li>
+  <% end %>
+</ul>
