@@ -16,7 +16,7 @@
       <tr>
         <td><%= link_to photo.title, photo_path(photo) %></td>
         <td><%= photo.description %></td>
-        <td><%= photo.image %></td>
+        <td><%= image_tag photo.image_url, height: 100 %></td>
         <td><%= link_to 'Edytuj', edit_photo_path(photo) %></td>
         <td><%= link_to 'Skasuj', photo, method: :delete, data: { confirm: 'Na pewno usunąć?'}   %></td>
       </tr>
