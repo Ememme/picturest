@@ -7,7 +7,8 @@
     <tr>
       <th>Tytuł</th>
       <th>Opis</th>
-      <th>Plik</th>
+      <th colspan="3">Plik</th>
+
     </tr>
   </thead>
   <tbody>
@@ -16,6 +17,8 @@
         <td><%= link_to photo.title, photo_path(photo) %></td>
         <td><%= photo.description %></td>
         <td><%= photo.image %></td>
+        <td><%= link_to 'Edytuj', edit_photo_path(photo) %></td>
+        <td><%= link_to 'Skasuj', photo, method: :delete, data: { confirm: 'Na pewno usunąć?'}   %></td>
       </tr>
     <% end %>
   </tbody>
