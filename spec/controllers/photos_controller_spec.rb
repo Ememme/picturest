@@ -47,6 +47,18 @@ describe PhotosController do
   end
 
   describe 'GET #edit' do
+    it 'responds succesfully and renders edit template' do
+      photo = create(:photo)
+      get :edit, params: { id: photo.id }
+      expect(response).to be_successful
+      expect(response).to render_template(:edit)
+    end
+
+    it 'assigns requested photo to @photo' do
+      photo = create(:photo)
+      get :edit, params: { id: photo }
+      expect(assigns(:photo)).to eq photo
+    end
   end
 
   describe 'POST #create' do
