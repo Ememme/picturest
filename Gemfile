@@ -42,7 +42,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   gem 'rails-controller-testing'
-  gem 'factory_bot', require: false
+  gem 'factory_bot_rails', '~> 4.0', require: false
   # Use sqlite3 as the database for Active Record
   gem 'pg'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
